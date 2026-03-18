@@ -23,6 +23,7 @@ export const getProductsController = async (req, res, next) => {
 export const getProductController = async (req, res, next) => {
   try {
     const { id } = req.params;
+    console.log(id);
     const product = await getProductService(id);
 
     if (!product) {
